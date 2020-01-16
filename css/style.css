@@ -1,0 +1,104 @@
+@charset "utf-8";
+
+.center {width: 1280px; margin: 0 auto;}
+
+/* LAYOUT - WRAP*/  
+.wrap {width: 100%; min-width: 1280px; border-top: 1px solid #000; background-color: #f6f6f6;}
+
+/* LAYOUT - HEADER */
+header{position: fixed; left: 0; top: 0; width: 100%; height: 80px; z-index: 50; transition: all 0.6;}
+header .inner_header{position: relative; width: 100%; height: 80px; box-sizing: border-box; text-align: center; transition: all 0.5s; z-index: 10; background-color: rgba(0, 0, 0, 0.85);}
+header .inner_header > .gnb{position: absolute; right: 100px;}
+header .inner_header > .gnb a{position: relative; display: inline-block; margin-left: 50px; color: #f7f7f7; font-size: 16px; line-height: 200%; font-weight: 300; line-height: 80px;}
+header .inner_header > .gnb a.home{color: #dddddd}
+header .inner_header > .gnb a:hover:after{content: ''; display: block; position: absolute; left: 50%; bottom: 20px; transform: translateX(-50%); height: 3px; width: 110px; background-color: #fff; animation-name: menu; animation-duration: 0.5s}
+@keyframes menu{from{width: 0} to {width: 110px}}  
+
+
+/* LAYOUT - INTRO-PAFE */      
+.intro_page {position: relative; left: 0; top: 0; width: 100%; height: 900px; background-image: url(../../images/main.jpg); background-repeat: no-repeat; background-attachment: fixed scroll;}
+.intro_page:before{content: ''; display: block; position: absolute; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(29, 29, 29, 0.8); z-index: 0;}
+.intro_page_text {position: absolute; left:0; top: 50%; width: 100%; color: #fff; box-sizing: border-box; text-align: center; transform: translateY(-50%);}
+.intro_page_text h1 {font-family:"Nexa"; font-size: 70px;}
+.intro_page_text h1 span{margin-right: 30px; color: #fff; font-family: "Nexa-Bold"}
+.intro_page_text p {margin: 10px 0 100px; font-size: 25px; font-weight:300;}
+.scroll_text {position: absolute; left:50%; bottom: 120px; width: 1200px; color: #fff; text-align: center; font-weight: 300; transform: translateX(-50%); font-size: 16px;}
+.scroll_text span{color: #eee}
+.scroll_text:after{content: ''; display: block; position: absolute; left: 50%; top: -150px; transform: translateX(-50%); width: 1px; height: 120px; background-color: #fff;}
+
+section {padding: 80px 0;}
+section > h2 {margin-bottom: 50px; text-align: center; font-family: "Nexa-Bold"; font-size: 50px;}
+
+#about {overflow: hidden; font-size: 16px; width: 880px;}
+#about .left {margin-left: 50px;}
+#about .left, #about .right {float: left;}
+#about .left img{width: 250px; height: 337px; text-align: right;}
+#about .right {margin-left: 200px;}
+#about .right h3{font-size: 32px;}
+#about .right h3 span{margin-left: 30px; font-size: 20px; font-weight: normal;}
+#about .right p {line-height: 2.5}
+#about .right p i {padding-right: 15px; width: 20px;}
+
+#skills {background-image: url(../images/skill.jpg); background-attachment: fixed;}
+#skills > ul {overflow: hidden;}
+#skills > ul > li {float: left;  width: 16.66%; text-align: center;}
+
+#portfolio .portfolio_box{overflow: hidden; margin-bottom: 100px;}
+#portfolio .portfolio_box .left {float: left; width: 640px;}
+#portfolio .portfolio_box .right {float: right; width: 600px;}
+#portfolio .portfolio_box p.title_img{overflow: hidden; width: 100%; height: 400px;}
+#portfolio .portfolio_box h3.title_text{position: relative; padding-top: 30px; font-size: 26px; font-weight: 600;}
+#portfolio .portfolio_box h3.title_text:after{content: ''; display: block; position: absolute; bottom: -20px; width: 50px; height: 2px; background-color: #333;}
+#portfolio .portfolio_box h3.title_text span {display: block; color: #ac0f0d; font-size: 20px;}
+#portfolio .portfolio_box .description{margin: 40px 0;}
+#portfolio .portfolio_box .description span{display: block; font-size: 16px; word-spacing: 5px; font-weight: 500; line-height: 1.8;}
+#portfolio .portfolio_box .description.blue {color: #3094ed;}
+#portfolio .portfolio_box .description.red {color: #ac0f0d}
+#portfolio .portfolio_box .description.green {color: #32a054;}
+#portfolio .portfolio_box .description p{margin-top: 20px; font-size: 16px;}
+#portfolio .portfolio_box .link_btn li{float: left;}
+#portfolio .portfolio_box .link_btn li a{position: relative; display: block;  width: 150px; padding: 5px 8px; margin: 0 10px 10px 0; border-radius: 5px; letter-spacing: 2px; color: #fff; font-weight: 400; font-size: 16px; text-align: center; overflow: hidden;}
+.link_btn.blue a{background-color: #3094ed;}
+.link_btn.red a{background-color: #ac0f0d;}
+.link_btn.green a{background-color: #32a054;}
+#portfolio .portfolio_box .link_btn li a:hover:after{content: ''; display: block; position: absolute; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(255, 255, 255, 0.2); animation-name: btn; animation-duration: 0.5s}
+#portfolio .portfolio_box .link_btn:after{content: ''; display: block; clear: both;}
+
+@keyframes btn{from{width: 0} to {width: 100%}}
+
+#contact {width: 100%; padding: 50px 0 60px; text-align: center; background-color: rgba(0, 0, 0, 0.9); letter-spacing: 2px;}
+#contact > h2 {margin-bottom: 50px; text-align: center; font-family: "Nexa-Bold"; font-size: 50px; color: #fff;}
+#contact ul{overflow: hidden;}
+#contact ul li{float: left; width: 33%;}
+#contact ul li dl{width: 400px;}
+#contact ul li dl dt{width: 100px; height: 100px; margin: 0 auto 20px; border-radius: 100px; background-repeat: no-repeat; font-size: 0;}
+#contact ul li.phone dt{background-image: url(../images/phone.png);}
+#contact ul li.e-mail dt{background-image: url(../images/mail.png);}
+#contact ul li.address dt{background-image: url(../images/map.png);}
+#contact ul li dl dd, #contact ul li dl dd a{color: #fff; font-size: 16px; font-weight: 300;}
+#contact ul:after{content: ''; display: block; clear: both;}  
+
+footer {background-color: #000;}
+footer div {padding: 30px 0; text-align: center; color: #fff;}
+
+/**/
+.skill-bar { margin: 35px auto; color: #fff; width: 700px; font-size: 14px; line-height: 30px; background-color: rgba(0,0,0,0.2);}
+.skill-bar * {
+    webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+.skill-bar div {position: relative; padding-left: 25px; width: 0;}
+/*.skill-bar.design div {background-color: #ffe200; color: #000;}*/
+#skills div[class*="design"] div {background-color: #ffe200; color: #000;}
+#skills div[class*="coding"] div {background-color: #2786cb;}
+.skill-bar.oa div {background-color: #c38700;}
+
+.skill-bar span {display: block; position: absolute; top: 0; right: 0; padding: 0 5px 0 10px; height: 100%; background-color: #1a1a1a; color: #fff;}
+.skill-bar span:before {content: ""; position: absolute; width: 6px; height: 6px; top: 50%; left: -3px; margin-top: -3px; background-color: #1a1a1a;transform: rotate(45deg);}
+
+
+
+
