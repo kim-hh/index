@@ -45,10 +45,14 @@ $(function () {
     });
     $('.gnb a:nth-of-type(3)').click(function (e) {
         e.preventDefault();
-        $('html, body').animate({scrollTop: 1600}, 600);
+        $('html, body').animate({scrollTop: 1750}, 600);
     });
     $('.gnb a:nth-of-type(4)').click(function (e) {
         e.preventDefault();
-        $('html, body').animate({scrollTop: 2450}, 600);
+        $('html, body').animate({scrollTop: 2600}, 600);
+    });
+    $('.gnb a:nth-of-type(5)').click(function (e) {
+        e.preventDefault();
+        $('html, body').animate({scrollTop: 3800}, 600);
     });
 });
