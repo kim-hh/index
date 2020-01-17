@@ -1,23 +1,5 @@
-$(function () {
-    var typingBool = false;
-    var typingIdx = 0;
-    var typingTxt = $(".typing-txt").text();
-    typingTxt = typingTxt.split("");
-    if (typingBool == false) {
-        typingBool = true;
-
-        var tyInt = setInterval(typing, 100);
-    }
-
-    function typing() {
-        if (typingIdx < typingTxt.length) {
-            $(".typing").append(typingTxt[typingIdx]);
-            typingIdx++;
-        } else {
-            clearInterval(tyInt);
-        }
-    }
-
+$(function () {    
+    /* skill-bar 애니메이션  */
     function skill_animate() {
         $(".skill-bar > div ").each(function () {
             var $this = $(this),
@@ -35,6 +17,7 @@ $(function () {
     }
     skill_animate();
     
+    /* gnb 메뉴 스크롤 이동  */
     $('.gnb a:nth-of-type(1)').click(function (e) {
         e.preventDefault();
         $('html, body').animate({scrollTop: 0}, 600);
