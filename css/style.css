@@ -2,10 +2,8 @@
 
 .center {width: 1280px; margin: 0 auto;}
 
-/* LAYOUT - WRAP*/  
 .wrap {width: 100%; min-width: 1280px; border-top: 1px solid #000; background-color: #f6f6f6;}
 
-/* LAYOUT - HEADER */
 header{position: fixed; left: 0; top: 0; width: 100%; height: 80px; z-index: 50; transition: all 0.6;}
 header .inner-header{position: relative; width: 100%; height: 80px; box-sizing: border-box; text-align: center; transition: all 0.5s; z-index: 10; background-color: rgba(0, 0, 0, 0.85);}
 header .inner-header > .gnb{position: absolute; right: 100px;}
@@ -14,8 +12,6 @@ header .inner-header > .gnb a.home{color: #dddddd}
 header .inner-header > .gnb a:hover:after{content: ''; display: block; position: absolute; left: 50%; bottom: 20px; transform: translateX(-50%); height: 3px; width: 110px; background-color: #fff; animation-name: menu; animation-duration: 0.5s}
 @keyframes menu{from{width: 0} to {width: 110px}}  
 
-
-/* LAYOUT - INTRO-PAFE */      
 .intro-page {position: relative; left: 0; top: 0; width: 100%; height: 900px; background-image: url(../images/main.jpg); background-repeat: no-repeat; background-attachment: fixed;}
 .intro-page:before{content: ''; display: block; position: absolute; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(29, 29, 29, 0.8); z-index: 0;}
 .intro-page-text {position: absolute; left:0; top: 500px; width: 100%; color: #fff; box-sizing: border-box; text-align: center; transform: translateY(-50%);}
@@ -43,42 +39,40 @@ section > h2 {margin-bottom: 50px; text-align: center; font-family: "Nexa-Bold";
 #skills {background-image: url(../images/skill.jpg); background-attachment: fixed; background-position: center top;}
 #skills ul {width: 1000px; margin: 0 auto;}
 #skills ul li {margin-left: 20px; list-style:initial; line-height: 30px; font-size: 16px; font-weight: 100;}
-.skill-bar { margin: 35px auto; color: #fff; width: 1000px; font-size: 14px; line-height: 30px; background-color: rgba(0,0,0,0.2);}
-.skill-bar * {
+#skills .skill-bar { margin: 35px auto; color: #fff; width: 1000px; font-size: 14px; line-height: 30px; background-color: rgba(0,0,0,0.2);}
+#skills .skill-bar * {
     webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -ms-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
 }
-.skill-bar div {position: relative; padding-left: 25px; width: 0;}
+#skills .skill-bar div {position: relative; padding-left: 25px; width: 0;}
 /*.skill-bar.design div {background-color: #ffe200; color: #000;}*/
 #skills div[class*="design"] div {background-color: #254fff;}
 #skills div[class*="coding"] div {background-color: #e34f27;}
-.skill-bar.oa div {background-color: #c38700;}
-.skill-bar span {display: block; position: absolute; top: 0; right: 0; padding: 0 5px 0 10px; height: 100%; background-color: #1a1a1a; color: #fff;}
-.skill-bar span:before {content: ""; position: absolute; width: 6px; height: 6px; top: 50%; left: -3px; margin-top: -3px; background-color: #1a1a1a;transform: rotate(45deg);}
+#skills .skill-bar.oa div {background-color: #c38700;}
+#skills .skill-bar span {display: block; position: absolute; top: 0; right: 0; padding: 0 5px 0 10px; height: 100%; background-color: #1a1a1a; color: #fff;}
+#skills .skill-bar span:before {content: ""; position: absolute; width: 6px; height: 6px; top: 50%; left: -3px; margin-top: -3px; background-color: #1a1a1a;transform: rotate(45deg);}
 
 #portfolio .portfolio-detail{overflow: hidden; margin-bottom: 100px;}
 #portfolio .portfolio-detail .left {float: left; width: 640px;}
 #portfolio .portfolio-detail .right {float: right; width: 600px;}
 #portfolio .portfolio-detail p.title_img{overflow: hidden; width: 100%; height: 400px;}
-#portfolio .portfolio-detail h3.title_text{position: relative; padding-top: 30px; font-size: 26px; font-weight: 600;}
-#portfolio .portfolio-detail h3.title_text:after{content: ''; display: block; position: absolute; bottom: -20px; width: 50px; height: 2px; background-color: #333;}
-#portfolio .portfolio-detail h3.title_text span {display: block; font-size: 40px;}
+#portfolio .portfolio-detail h3{position: relative; padding-top: 30px; font-size: 32px; font-family: "Nexa-Bold"; font-weight: 600;}
+#portfolio .portfolio-detail h3:after{content: ''; display: block; position: absolute; bottom: -20px; width: 50px; height: 2px; background-color: #333;}
+#portfolio .portfolio-detail h3 span {display: block; font-size: 26px;}
 #portfolio .portfolio-detail .description{margin: 40px 0; letter-spacing: -1px;}
 #portfolio .portfolio-detail .description span{display: block; font-size: 16px; word-spacing: 5px; font-weight: 500; line-height: 1.8;}
 #portfolio .portfolio-detail .description {color: #ac0f0d}
 #portfolio .portfolio-detail .description p{margin-top: 20px; font-size: 16px;}
 #portfolio .portfolio-detail .link-btn li{float: left;}
 #portfolio .portfolio-detail .link-btn li a{position: relative; display: block;  width: 150px; padding: 5px 8px; margin: 0 10px 10px 0; border-radius: 5px; letter-spacing: 2px; color: #fff; font-weight: 400; font-size: 16px; text-align: center; overflow: hidden;}
-.link-btn.blue a{background-color: #3094ed;}
-.link-btn.red a{background-color: #ac0f0d;}
-.link-btn.green a{background-color: #32a054;}
+#portfolio .portfolio-detail .link-btn.red a{background-color: #ac0f0d;}
+#portfolio .portfolio-detail .link-btn.green a{background-color: #32a054;}
 
 #portfolio .portfolio-detail .link-btn li a:hover:after{content: ''; display: block; position: absolute; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(255, 255, 255, 0.2); animation-name: btn; animation-duration: 0.5s}
 #portfolio .portfolio-detail .link-btn:after{content: ''; display: block; clear: both;}
-
 @keyframes btn{from{width: 0} to {width: 100%}}
 
 #contact {width: 100%; padding: 50px 0 60px; text-align: center; background-color: rgba(0, 0, 0, 0.9); }
@@ -94,10 +88,3 @@ section > h2 {margin-bottom: 50px; text-align: center; font-family: "Nexa-Bold";
 
 footer {background-color: #000;}
 footer div {padding: 30px 0; text-align: center; color: #fff;}
-
-/**/
-
-
-
-
-
