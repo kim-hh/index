@@ -14,7 +14,7 @@
 <body>
     <div class="wrap">
         <header>
-            <div class="inner_header">
+            <div class="inner-header">
                 <nav class="gnb">
                     <a class="home" href="#">HOME</a>
                     <a href="#about">ABOUT ME</a>
@@ -23,22 +23,22 @@
                 </nav>
             </div>
         </header>
-        <section class="intro_page">
-            <div class="intro_page_text">
+        <section class="intro-page">
+            <div class="intro-page-text">
                 <h1><span>KIM HYUNHO</span>PORTFOLIO</h1>
                 <p>신입 웹퍼블리셔 김현호 포트폴리오</p>
             </div>
             <div class="typing"></div>
-            <div class="scroll_text">
+            <div class="scroll-text">
                 본 사이트를 포함한 아래 모든 사이트는 상업적 목적이 아닌 개인 포트폴리오 용도로 제작되었습니다.
             </div>
         </section>
-        <section class="portfolio center" id="about">
+        <section class="center" id="about">
             <h2>ABOUT</h2>
-            <div class="left">
+            <div class="first">
                 <img src="images/my_picture.jpg" alt="김현호">
             </div>
-            <div class="right">
+            <div class="second">
                 <h3>김현호<span>Web Publisher</span></h3>
                 <hr>
                 <p><i class="fas fa-map-marker-alt"></i>서울시 도봉구</p>
@@ -49,13 +49,18 @@
                 <hr>
                 <p>2019.08~2020.02 하이미디어컴퓨터학원(종로)<br><i>스마트웹콘텐츠제작 웹디자이너&amp;웹퍼블리셔 과정 수료</i></p>
             </div>
+            <div class="third">
+                <span class="blind">김현호 명함</span>
+            </div>
         </section>
 
-        <section class="portfolio" id="skills">
+        <section id="skills">
             <h2>SKILLS</h2>
+            <div><span>#웹표준 #크로스브라우징 </span></div>
             <div class="skill-bar design1">
                 <div data-width="90">Photoshop<span>90%</span></div>
             </div>
+            
             <div class="skill-bar design2">
                 <div data-width="85">Illustrator<span>85%</span></div>
             </div>
@@ -76,30 +81,30 @@
 
         <section class="center" id="portfolio">
             <h2>PORTFOLIO</h2>
-            <div class="portfolio_box">
+            <div class="portfolio-detail">
                 <div class="left">
                     <p class="title_img"><img src="images/title_1.jpg" alt="COFFEEBAY 반응형"></p>
                 </div>
                 <div class="right">
                     <h3 class="title_text"><span>01</span>COFFEEBAY</h3>
-                    <div class="description red"><span>#반응형웹</span><span>참여도 : 기획 100% / 디자인 100% / 코딩 100%</span><span>html5/css3/jQuery/JavaScript</span><span>2019.10~2019.11</span>
+                    <div class="description"><span>#반응형웹</span><span>참여도 : 기획 100% / 디자인 100% / 코딩 100%</span><span>작업기간 : 2019.10~2019.11(약 6주)</span>
                     </div>
-                    <ul class="link_btn red">
-                        <li><a href="https://kim-hh.github.io/p1/" target="_blank">사이트 보기</a></li>
+                    <ul class="link-btn red">
+                        <li><a href="https://kim-hh.github.io/p1/" target="_blank">반응형 웹</a></li>
                     </ul>
                 </div>
             </div>
-            <div class="portfolio_box">
+            <div class="portfolio-detail">
                 <div class="left">
-                    <p class="title_img"><img src="images/title_2.jpg" alt="TAGHEUER PC"></p>
+                    <p class="title_img"><img src="images/title_2.jpg" alt="TAGHEUER PC&Mobile"></p>
                 </div>
                 <div class="right">
                     <h3 class="title_text"><span>02</span>TAG HEUER (PC,Mobile 별도)</h3>
-                    <div class="description"><span class="green">#PC웹 #모바일웹<br>참여도 : 기획 100% / 디자인 100% / 코딩 100% <br>html5/css3/jQuery/JavaScript<br>2019.11~2019.12</span>
+                    <div class="description"><span>#PC웹 #Mobile웹</span><span>참여도 : 기획 100% / 디자인 100% / 코딩 100%</span><span>작업기간 : 2019.11~2019.12(약 5주)</span>
                     </div>
-                    <ul class="link_btn green">
-                        <li><a href="https://kim-hh.github.io/p2/" target="_blank">PC 보기</a></li>
-                        <li><a href="https://kim-hh.github.io/p2/mo" target="_blank">모바일 보기</a></li>
+                    <ul class="link-btn green">
+                        <li><a href="https://kim-hh.github.io/p2/" target="_blank">PC 웹</a></li>
+                        <li><a href="https://kim-hh.github.io/p2/mo" target="_blank">모바일 웹</a></li>
                     </ul>
                 </div>
             </div>
@@ -107,7 +112,7 @@
         <section class="center" id="contact">
             <h2>CONTACT</h2>
             <div>
-                <ul class="contact_list center">
+                <ul class="center">
                     <li class="phone">
                         <dl>
                             <dt>phone</dt>
