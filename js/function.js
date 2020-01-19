@@ -18,24 +18,42 @@ $(function () {
     skill_animate();
     
     /* gnb 메뉴 스크롤 이동  */
-    $('.gnb a:nth-of-type(1)').click(function (e) {
+    var aboutPosition = $("#about").offset().top;
+    var skillPosition = $("#skills").offset().top;
+    var portfolioPosition = $("#portfolio").offset().top;
+    var contactPosition = $("#contact").offset().top;
+    $('.gnb li:nth-of-type(1) a, .m-gnb li:nth-of-type(1) a').click(function (e) {
         e.preventDefault();
         $('html, body').animate({scrollTop: 0}, 600);
     });
-    $('.gnb a:nth-of-type(2)').click(function (e) {
+    $('.gnb li:nth-of-type(2) a, .m-gnb li:nth-of-type(2) a').click(function (e) {
         e.preventDefault();
-        $('html, body').animate({scrollTop: 980}, 600);
+        $('html, body').animate({scrollTop: aboutPosition}, 600);
     });
-    $('.gnb a:nth-of-type(3)').click(function (e) {
+    $('.gnb li:nth-of-type(3) a, .m-gnb li:nth-of-type(3) a').click(function (e) {
         e.preventDefault();
-        $('html, body').animate({scrollTop: 1750}, 600);
+        $('html, body').animate({scrollTop: skillPosition}, 600);
     });
-    $('.gnb a:nth-of-type(4)').click(function (e) {
+    $('.gnb li:nth-of-type(4) a, .m-gnb li:nth-of-type(4) a').click(function (e) {
         e.preventDefault();
-        $('html, body').animate({scrollTop: 2600}, 600);
+        $('html, body').animate({scrollTop: portfolioPosition}, 600);
     });
-    $('.gnb a:nth-of-type(5)').click(function (e) {
+    $('.gnb li:nth-of-type(5) a, .m-gnb li:nth-of-type(5) a').click(function (e) {
         e.preventDefault();
-        $('html, body').animate({scrollTop: 3800}, 600);
+        $('html, body').animate({scrollTop: contactPosition}, 600);
+    });
+    
+    /* */
+    $('.m-menu-btn').click(function () {
+        $('.m-gnb li').find('ul').stop().slideUp();
+        if ($(this).hasClass('on')) {
+            $('html, body').removeClass('ony');
+            $('.m-gnb').slideToggle();
+            $(this).removeClass('on');
+        } else {
+            $('html, body').addClass('ony');
+            $('.m-gnb').slideToggle();
+            $(this).addClass('on');
+        }
     });
 });

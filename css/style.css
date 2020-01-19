@@ -1,29 +1,31 @@
 @charset "utf-8";
 
 .center {width: 1280px; margin: 0 auto;}
-
-.wrap {width: 100%; min-width: 1280px; border-top: 1px solid #000; background-color: #f6f6f6;}
+.wrap {background-color: #f6f6f6;}
 
 header{position: fixed; left: 0; top: 0; width: 100%; height: 80px; z-index: 50; transition: all 0.6;}
 header .inner-header{position: relative; width: 100%; height: 80px; box-sizing: border-box; text-align: center; transition: all 0.5s; z-index: 10; background-color: rgba(0, 0, 0, 0.85);}
-header .inner-header > .gnb{position: absolute; right: 100px;}
-header .inner-header > .gnb a{position: relative; display: inline-block; margin-left: 50px; color: #f7f7f7; font-size: 16px; line-height: 200%; font-weight: 300; line-height: 80px;}
-header .inner-header > .gnb a.home{color: #dddddd}
-header .inner-header > .gnb a:hover:after{content: ''; display: block; position: absolute; left: 50%; bottom: 20px; transform: translateX(-50%); height: 3px; width: 110px; background-color: #fff; animation-name: menu; animation-duration: 0.5s}
-@keyframes menu{from{width: 0} to {width: 110px}}  
+header .inner-header .gnb{position: absolute; right: 100px;}
+header .inner-header .gnb li {display: inline-block;} 
+header .inner-header .gnb a{position: relative; display: inline-block; margin-left: 50px; color: #f7f7f7; font-size: 16px; line-height: 200%; font-weight: 300; line-height: 80px;}
+header .inner-header .gnb a:hover:after{content: ''; display: block; position: absolute; left: 50%; bottom: 20px; transform: translateX(-50%); height: 3px; width: 110px; background-color: #fff; animation-name: menu; animation-duration: 0.5s;}
+@keyframes menu{from{width: 0} to {width: 110px;}}  
+/**/
+header .inner-header .gnb div {width: 50px; height: 50px;  background-color: #fff;}
+/**/
 
 .intro-page {position: relative; left: 0; top: 0; width: 100%; height: 900px; background-image: url(../images/main.jpg); background-repeat: no-repeat; background-attachment: fixed;}
 .intro-page:before{content: ''; display: block; position: absolute; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(29, 29, 29, 0.8); z-index: 0;}
-.intro-page-text {position: absolute; left:0; top: 500px; width: 100%; color: #fff; box-sizing: border-box; text-align: center; transform: translateY(-50%);}
-.intro-page-text h1 {font-family:"Nexa"; font-size: 70px;}
-.intro-page-text h1 span{margin-right: 30px; color: #fff; font-family: "Nexa-Bold"}
-.intro-page-text p {margin: 10px 0 50px; font-size: 25px; font-weight: 100; }
-.scroll-text {position: absolute; left:50%; bottom: 120px; width: 1200px; color: #fff; text-align: center; font-weight: 300; transform: translateX(-50%); font-size: 16px;}
-.scroll-text span{color: #eee}
-.scroll-text:after{content: ''; display: block; position: absolute; left: 50%; top: -150px; transform: translateX(-50%); width: 1px; height: 120px; background-color: #fff;}
+.intro-page .intro-page-text {position: absolute; left:0; top: 500px; width: 100%; color: #fff; box-sizing: border-box; text-align: center; transform: translateY(-50%);}
+.intro-page .intro-page-text h1 {font-family:"Nexa"; font-size: 70px;}
+.intro-page .intro-page-text h1 span{display: inline-block; margin-right: 30px; color: #fff; font-family: "Nexa-Bold";}
+.intro-page .intro-page-text p {margin: 10px 0 50px; font-size: 25px; font-weight: 100; }
+.intro-page .scroll-text {position: absolute; left:50%; bottom: 120px; width: 1200px; color: #fff; text-align: center; font-weight: 300; transform: translateX(-50%); font-size: 16px;}
+.intro-page .scroll-text span{color: #eee}
+.intro-page .scroll-text:after{content: ''; display: block; position: absolute; left: 50%; top: -150px; transform: translateX(-50%); width: 1px; height: 120px; background-color: #fff;}
 
 section {padding: 80px 0;}
-section > h2 {margin-bottom: 50px; text-align: center; font-family: "Nexa-Bold"; font-size: 50px; text-shadow: 2px 2px 2px #000}
+section > h2 {padding-bottom: 50px; text-align: center; font-family: "Nexa-Bold"; font-size: 50px; text-shadow: 2px 2px 2px #000;}
 
 #about {overflow: hidden; font-size: 16px; background-image: url(../images/name_card.png); background-size: 50%; background-repeat: no-repeat; background-position: right center;}
 /*#about .left {margin-left: 50px;}*/
@@ -32,14 +34,14 @@ section > h2 {margin-bottom: 50px; text-align: center; font-family: "Nexa-Bold";
 #about .second {float: left; margin-left: 100px;}
 #about .second h3{font-size: 32px;}
 #about .second h3 span{margin-left: 30px; font-size: 20px; font-weight: normal;}
-#about .second p {line-height: 2.5}
+#about .second p {line-height: 2.5;}
 #about .second p i {padding-right: 15px; width: 20px;}
 #about .third {float: left; width: 500px; height: 500px; }
 
 #skills {background-image: url(../images/skill.jpg); background-attachment: fixed; background-position: center top;}
 #skills ul {width: 1000px; margin: 0 auto;}
-#skills ul li {margin-left: 20px; list-style:initial; line-height: 30px; font-size: 16px; font-weight: 100;}
-#skills .skill-bar { margin: 35px auto; color: #fff; width: 1000px; font-size: 14px; line-height: 30px; background-color: rgba(0,0,0,0.2);}
+#skills ul li {margin-left: 20px; list-style:initial; line-height: 1.8; font-size: 16px; font-weight: 100;}
+#skills .skill-bar { margin: 35px auto; color: #fff; width: 1000px; font-size: 14px; line-height: 2.5; background-color: rgba(0,0,0,0.2);}
 #skills .skill-bar * {
     webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
@@ -65,7 +67,6 @@ section > h2 {margin-bottom: 50px; text-align: center; font-family: "Nexa-Bold";
 #portfolio .portfolio-detail .description{margin: 40px 0; letter-spacing: -1px;}
 #portfolio .portfolio-detail .description span{display: block; font-size: 16px; word-spacing: 5px; font-weight: 500; line-height: 1.8;}
 #portfolio .portfolio-detail .description {color: #ac0f0d}
-#portfolio .portfolio-detail .description p{margin-top: 20px; font-size: 16px;}
 #portfolio .portfolio-detail .link-btn li{float: left;}
 #portfolio .portfolio-detail .link-btn li a{position: relative; display: block;  width: 150px; padding: 5px 8px; margin: 0 10px 10px 0; border-radius: 5px; letter-spacing: 2px; color: #fff; font-weight: 400; font-size: 16px; text-align: center; overflow: hidden;}
 #portfolio .portfolio-detail .link-btn.red a{background-color: #ac0f0d;}
@@ -88,3 +89,70 @@ section > h2 {margin-bottom: 50px; text-align: center; font-family: "Nexa-Bold";
 
 footer {background-color: #000;}
 footer div {padding: 30px 0; text-align: center; color: #fff;}
+
+
+@media screen and (max-width:768px) {
+   header .inner-header > .gnb, #about .third, .intro-page .scroll-text:after, #portfolio .portfolio-detail h3:after {display: none;}
+    img, .center,.scroll-text  {width: 100%;}
+    
+/*    header .inner-header > .mo-gnb {display: inline-block;height: 60px;}*/
+    header .inner-header {height: 16vw;}
+    header .inner-header .m-menu-btn {position: absolute; top: 5vw; right: 5%; width: 8%; height: 8vw;  transition: all .4s; cursor: pointer;}
+    header .inner-header .m-menu-btn span {position: absolute; display: block; top: 50%; width: 100%;  height: 0.5vw; transform: translate(0,50%); background: rgb(255, 255, 255, 1); border-radius: 1vw; transition: .5s;}
+    header .inner-header .m-menu-btn  span:before,
+    header .inner-header .m-menu-btn  span:after {position: absolute; content: ""; top: 0; right: 0; width: 85%; height:0.5vw; background: rgb(255, 255, 255, 1); border-radius: 1vw; transition: .5s;}
+    header .inner-header .m-menu-btn span:before {top: -3vw;}
+    header .inner-header .m-menu-btn  span:after {top: 3vw; width: 60%;}
+    header .inner-header .m-menu-btn .on span {background: rgb(255, 255, 255, 0);}
+    header .inner-header .m-menu-btn .on span:before {top: 0;  transform: rotate(45deg); width: 100%;}
+    header .inner-header .m-menu-btn .on span:after {top: 0; transform: rotate(-45deg); width: 100%;}
+    header .inner-header .m-gnb  {display: none; position: fixed;  top: 16vw; right: 0; height: 100%; width: 100%;  overflow-y: auto;  z-index: 10000; box-sizing: border-box; background-color: rgba(0, 0, 0, 0.85);}
+    header .inner-header .m-gnb li a {line-height: 15vw; font-size: 5vw; color: #fff;}
+    header .inner-header .m-menu-btn.on span {background: rgb(255, 255, 255, 0);}
+    header .inner-header .m-menu-btn.on span:before {top: 0;  transform: rotate(45deg); width: 100%;}
+    header .inner-header .m-menu-btn.on span:after {top: 0; transform: rotate(-45deg); width: 100%;}
+    
+    .intro-page {height: 70vw; background-size: 160%; background-position: center top;}
+    .intro-page .intro-page-text {top: 50vw;}
+    .intro-page .intro-page-text h1 {font-size: 8vw;}
+    .intro-page .intro-page-text h1 span{margin-right: 0;}
+    .intro-page .intro-page-text p {margin: 1vw 0 2vw; font-size: 4vw;}
+    .intro-page .scroll-text {width: 90%; bottom: 10vw; font-size: 2.5vw;}
+    
+    section {padding: 10vw 0;}
+    section > h2 {padding-bottom: 10vw; font-size: 8vw; text-shadow: 2px 2px 2px #000;}
+    
+    #about {font-size: 3vw; background-image: none;}
+    #about .first, #about .second {float: inherit; width: 90%; margin: 0 auto;}
+    #about .first {text-align: center;}
+    #about .first img{width: 50%; height: auto;}
+    #about .second h3{font-size: 6vw; text-align: center;}
+    #about .second h3 span{margin-left: 5%; font-size: 4vw;}
+    #about .second p i {padding-right: 2.5%; width: 5%;}
+    
+    #skills {background-image: none;}
+    #skills ul {width: 90%;}
+    #skills ul li {margin-left: 3%; font-size: 3vw;}
+    #skills .skill-bar {margin: 3vw auto; width: 90%; font-size: 2.5vw;}
+    #skills .skill-bar div {padding-left: 2%; width: 0;}
+    
+    #portfolio .portfolio-detail{margin-bottom: 10vw;}
+    #portfolio .portfolio-detail .left, #portfolio .portfolio-detail .right {float: inherit; width: 100%; margin: 0 auto;}
+    #portfolio .portfolio-detail .right {width: 90%;}
+    #portfolio .portfolio-detail p.title_img{width: 90%; height: auto; margin: 0 auto;}
+    #portfolio .portfolio-detail h3{padding-top: 3vw; font-size: 5vw;}
+    #portfolio .portfolio-detail h3 span {font-size: 5vw;}
+    #portfolio .portfolio-detail .description{margin: 4vw 0; letter-spacing: -1px;}
+    #portfolio .portfolio-detail .description span{font-size: 3vw; word-spacing: 5px;}
+    #portfolio .portfolio-detail .link-btn {display: table; margin: auto;}
+    #portfolio .portfolio-detail .link-btn li a{padding: 1vw 2vw; margin: 0 10px 10px 0; border-radius: 5px; letter-spacing: 2px; font-size: 3vw;}
+    
+    #contact {padding: 10vw 0 12vw;}
+    #contact > h2 {margin-bottom: 0;}
+    #contact ul li{float: inherit; width: 50%; margin: auto;}
+    #contact ul li dl{width: 100%; padding-bottom: 5vw}
+    #contact ul li dl dt{width: 100%; height: 20vw; margin: 0 auto 2vw; background-size: 40%; background-position: center top;}
+    #contact ul li dl dd, #contact ul li dl dd a{color: #fff; font-size: 3vw; font-weight: 300; letter-spacing: 1px;}
+
+    footer div {padding: 6vw 0; text-align: center; color: #fff;}    
+}
