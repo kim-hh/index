@@ -9,6 +9,7 @@ header .inner-header .gnb{position: absolute; right: 100px;}
 header .inner-header .gnb li {display: inline-block;} 
 header .inner-header .gnb a{position: relative; display: inline-block; margin-left: 50px; color: #f7f7f7; font-size: 16px; line-height: 200%; font-weight: 300; line-height: 80px;}
 header .inner-header .gnb a:hover:after{content: ''; display: block; position: absolute; left: 50%; bottom: 20px; transform: translateX(-50%); height: 3px; width: 110px; background-color: #fff; animation-name: menu; animation-duration: 0.5s;}
+header .inner-header .m-gnb{display: none;}
 @keyframes menu{from{width: 0} to {width: 110px;}}  
 /**/
 header .inner-header .gnb div {width: 50px; height: 50px;  background-color: #fff;}
