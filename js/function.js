@@ -1,4 +1,5 @@
 $(function () {    
+    console.log($(window).scrollTop());
     /* skill-bar 애니메이션  */
     function skill_animate() {
         $(".skill-bar > div ").each(function () {
@@ -7,12 +8,12 @@ $(function () {
             $this.css({
                 'width': skills + '%'
             });
-            $('.skill-bar.design1 > div').stop().css({'width': '90%'});
-            $('.skill-bar.design2 > div').stop().css({'width': '85%'});
-            $('.skill-bar.coding1 > div').stop().css({'width': '90%'});
-            $('.skill-bar.coding2 > div').stop().css({'width': '90%'});
-            $('.skill-bar.coding3 > div').stop().css({'width': '65%'});
-            $('.skill-bar.oa > div').stop().css({'width': '90%'});
+            $('.skill-bar.design1 > div').stop().animate({'width': '90%'},1500);
+            $('.skill-bar.design2 > div').stop().animate({'width': '85%'},1500);
+            $('.skill-bar.coding1 > div').stop().animate({'width': '90%'},1500);
+            $('.skill-bar.coding2 > div').stop().animate({'width': '90%'},1500);
+            $('.skill-bar.coding3 > div').stop().animate({'width': '65%'},1500);
+            $('.skill-bar.oa > div').stop().animate({'width': '90%'},1500);
         });
     }
     skill_animate();
